@@ -27,8 +27,12 @@
       <li><%= !@room.has_airco ? ("<del>Air Conditioning</del>").html_safe : "Air Conditioning" %></li>
     </ul>
 
+    <h4>Themes</h4>
+    <% @themes.each do |theme| %>
+      <span class="label label-success"><%= theme.name %></span>
+    <% end %>
+    
   </div>
-
 </div>
 
 <%= link_to "Back", rooms_path, class: "btn btn-default" %>
