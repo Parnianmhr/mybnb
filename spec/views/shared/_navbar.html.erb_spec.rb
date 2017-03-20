@@ -22,4 +22,12 @@ describe "shared/_navbar.html.erb" do
       expect(rendered).to have_content profile.last_name
     end
   end
+
+# Write an extra test for the navbar that checks if the log in and sign up links get rendered when the user is not signed in.
+  # context "with log in and sign up" do
+  #   it "has in navbar" do
+  #     visit home_url
+  #     expect(page).to have_text("Log In")
+  #   end
+  # end
 end
