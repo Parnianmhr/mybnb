@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 describe "shared/_navbar.html.erb" do
+  # Write an extra test for the navbar that checks if the log in and sign up links get rendered when the user is not signed in.
+  # context "with log in and sign up" do
+  #   it "has in navbar" do
+  #     visit root_url
+  #     expect(page).to have_text("Log In")
+  #   end
+  # end
+
   before { sign_in user }
 
   context "without profile" do
@@ -22,12 +30,12 @@ describe "shared/_navbar.html.erb" do
       expect(rendered).to have_content profile.last_name
     end
   end
-
-# Write an extra test for the navbar that checks if the log in and sign up links get rendered when the user is not signed in.
-  # context "with log in and sign up" do
-  #   it "has in navbar" do
-  #     visit root_url
-  #     expect(page).to have_text("Log In")
-  #   end
-  # end
 end
+
+# context "Home Page" do
+#   it "shows login and sign up in navbar" do
+#     # render
+#     # visit root_url
+#     expect(page).to have_content "Log in"
+#   end
+# end
