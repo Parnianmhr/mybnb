@@ -6,10 +6,6 @@ class BookingsController < ApplicationController
         @booking = current_user.bookings
     end
 
-    # def show
-    #     @booking = current_user.bookings
-    # end
-
     def create
         @booking = current_user.bookings.create(booking_params)
         @booking.room_id = params[:room_id]

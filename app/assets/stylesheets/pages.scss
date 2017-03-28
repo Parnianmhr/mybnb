@@ -153,10 +153,17 @@ ul {
   background-color: transparentize(white, 0.2);
 }
 
+
 .dropdown-font li a {
   font-size: 17px;
 }
 
 .dropdown-menu {
   min-width: 150px;
+}
+
+.homepage-down {
+  width: auto;
+  background-color: lightyellow;
+  position: absolute;
 }
