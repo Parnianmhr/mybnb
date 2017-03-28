@@ -1,0 +1,10 @@
+<div class="booking-title">
+  <p>Hey <%= current_user.has_profile? ? current_user.full_name : current_user.email  %>! your bookings are here:</p>
+</div>
+<% @booking.each do |book| %>
+    <div class="panel">
+      <p>Check out your room  <%= link_to "HERE", room_path(book.room_id) %> !</p>
+      <p>start date:<%= book.starts_at %></p>
+      <p>end date:<%= book.ends_at %></p>
+    </div>
+<% end %>

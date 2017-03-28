@@ -1,0 +1,12 @@
+<p>your bookings</p>
+<% @booking.each do |book| %>
+  <% if current_user == @room.user %>
+    <div class="panel">
+      <%= book.starts_at %>
+    </div>
+  <% end %>
+<% end %>
+
+<p>room:</p>
+<p>user:
+</p>
