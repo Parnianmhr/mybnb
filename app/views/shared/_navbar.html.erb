@@ -1,5 +1,5 @@
 <!-- Static navbar -->
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -8,10 +8,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" style="padding: 0">
-        <img alt="Brand" src="/assets/pan2.png" style="height:50px; width:50px">
-      </a>
-<!--   <%= link_to image_tag("pan1.png", size: "50x50", :alt => "sksks"), root_path %> -->
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "Home", root_path %></li>
+      </ul>
+
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
