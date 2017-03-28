@@ -41,10 +41,8 @@
     <!-- Photos -->
     <h4>Photos</h4>
     <% @room.photos.each do |photo| %>
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="panel">
         <%= image_tag photo.image.thumbnail %>
-      </div>
     </div>
     <% end %>
 
@@ -57,4 +55,4 @@
   </div>
 </div>
 
-<%= link_to "Back", rooms_path, class: "btn btn-default" %>
+<%= link_to "Back", rooms_path, class: "btn btn-yellow" %>
