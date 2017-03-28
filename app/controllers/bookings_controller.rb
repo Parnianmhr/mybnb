@@ -16,9 +16,9 @@ class BookingsController < ApplicationController
         if @booking.room_available?
             @booking.set_total_price
             @booking.save
-            redirect_to @booking.room, notice: 'Thank you for booking!'
+            redirect_to @booking.room, notice: 'Thank you for booking! You can find your bookings in Bookings page.'
         else
-            redirect_to @boking.room, notice: 'Sorry! This listing is not available during the dates you requested.'
+            redirect_to @booking.room, notice: 'Sorry! This listing is not available during the dates you requested.'
         end
     end
 
