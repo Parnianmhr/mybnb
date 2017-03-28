@@ -53,8 +53,11 @@ body h1 {
 @media (min-width:801px) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
-@media (min-width:1025px) {
+@media (min-width:992px) {
     /* big landscape tablets, laptops, and desktops */
+    .rooms {
+      left: 17%;
+    }
 }
 @media (min-width:1281px) {
     /* hi-res laptops and desktops */
