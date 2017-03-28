@@ -2,7 +2,9 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update]
   before_action :authenticate_user!
 
-
+def show
+  @profile = current_user.profile
+end
   def new
     @profile = Profile.new
   end
@@ -10,7 +12,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = current_user.build_profile(profile_params)
     if @profile.save
-      redirect_to edit_profile_path(@profile), notice: "Profile successfully created"
+      redirect_to profile_path(@profile), notice: "Profile successfully created"
     else
       render :new
     end
@@ -21,7 +23,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @profile.update(profile_params)
-      redirect_to edit_profile_path(@profile), notice: "Profile successfully updated"
+      redirect_to profile_path(@profile), notice: "Profile successfully updated"
     else
       render :edit
     end

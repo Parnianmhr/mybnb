@@ -1,0 +1,8 @@
+<h4>Profile</h4>
+
+<div class="panel">
+  <p>  <%= @profile.first_name %></p>
+    <p><%= @profile.last_name %></p>
+    <p><%= @profile.bio %></p>
+</div>
+<%= link_to "Edit Profile", edit_profile_path(current_user.profile), class: "btn btn-yellow" %>
